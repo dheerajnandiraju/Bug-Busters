@@ -1,0 +1,21 @@
+body{
+    background-image: url(../../assets/images/black-dot.png);
+    background-repeat: repeat;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    flex-direction: column;
+    color: white;
+    font-size: xx-large;
+    font-weight:lighter;
+}
+
+#logo{
+    height: 10rem;
+    width: 15rem;
+}
