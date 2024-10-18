@@ -186,13 +186,11 @@
 .dsa, .cloud { background-color: #333; color: #ffffff; border: solid #ffc107 5px;}
 
 .secondary__content {
-    width: 800px;
     display: flex;
     gap: 16px;
 }
 
 .students__container {
-  
     color: white;
     border: solid #ffc107 3px;
     background: #333;
@@ -203,7 +201,6 @@
 }
 
 .leaderboard__container {
-    width: 800px;
    background-color: #444;
    border: solid #5c8fe6 5px;
     color: white;
@@ -332,15 +329,3 @@
         width: 100%;
     }
 }
-
-.leaderboard__container {
-    width: 100%; /* Adjust the width to take more space */
-    background-color: #444;
-    border: solid #5c8fe6 5px;
-    color: white;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1;
-}
-
