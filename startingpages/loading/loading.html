@@ -11,5 +11,21 @@
         <img id="logo"  src="../../assets/images/web logo.png" alt="2 Steps Ahead">
         <h1>2 Steps Ahead...</h1>
     </div>
+    <script>
+        // Wait for 3 seconds and then redirect based on the user type
+        setTimeout(() => {
+            const userType = localStorage.getItem('userType');
+            if (userType === 'student') {
+                window.location.href = '../../StudentProfile/studenprofile.html';
+            } else if (userType === 'mentor') {
+                window.location.href = '../../mentor/dashboard.html';
+            } else {
+                // If userType is not set, redirect to the start page
+                window.location.href = '../studentMentor/studentMentor.html';
+            }
+        }, 3000);
+    </script>
+    
+    
 </body>
 </html>
