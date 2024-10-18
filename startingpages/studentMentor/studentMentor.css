@@ -1,0 +1,105 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-image: url(../../assets/images/black-dot.png);
+    background-repeat: repeat;
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a; /* Fallback for background */
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo img {
+    width: 9rem;
+    height: auto;
+}
+
+
+.container {
+    text-align: center;
+    color: #fff;
+    position: relative;
+ 
+ 
+}
+
+h1{
+    margin: 0;
+    font-size: 400%;
+}
+
+h2{
+    margin: 1rem 0;
+    font-size: 200%;
+}
+
+.dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 5rem;
+    align-items: center;
+   
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #666;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #007bff; /* Blue for active step */
+}
+
+a{
+    color: rgb(219, 219, 219);
+    font-size: xx-large;
+    text-decoration: none;
+}
+
+.role-selection {
+    text-align: center;
+    color: #fff;
+}
+
+.role-selection h2 {
+    margin-bottom: 20px;
+    font-size: 200%;
+}
+
+.buttons {
+    display: flex;
+    gap: 5rem; /* Space between buttons */
+    justify-content: center;
+}
+
+.role-button {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #666;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 300%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.role-button:hover {
+    background-color: #6a6a6a; /* Change background on hover */
+    border-color: #000000; /* Change border color on hover */
+
+}
