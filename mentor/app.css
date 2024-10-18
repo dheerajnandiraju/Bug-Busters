@@ -20,13 +20,15 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    background: #6698F1;
+    background: #444;
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 65%;
     height: 100%;
+    color: white;
+    border: solid #5c8fe6 5px;
 }
 
 .schedule__header {
@@ -67,6 +69,7 @@
 }
 
 .schedule__time {
+    border: solid #7eadfd 5px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 16px;
@@ -75,7 +78,7 @@
     margin-left: 64px;
     align-items: center;
     padding: 8px 16px;
-    background: #7eadfd;
+    background: #333;
     border-radius: 8px;
 }
 
@@ -112,6 +115,7 @@
     align-items: center;
     padding: 8px;
     background: #ffffff;
+    color: black;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -123,6 +127,7 @@
 }
 
 .event__details {
+   
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -177,8 +182,8 @@
     height: 100%;
 }
 
-.web-dev, .art { background-color: #ffc107; color: #000000; }
-.dsa, .cloud { background-color: #4a67e8; color: #ffffff; }
+.web-dev, .art { background-color: #333; color: #ffffff; border: solid #ffc107 5px;}
+.dsa, .cloud { background-color: #333; color: #ffffff; border: solid #ffc107 5px;}
 
 .secondary__content {
     display: flex;
@@ -186,7 +191,9 @@
 }
 
 .students__container {
-    background: #ffc107;
+    color: white;
+    border: solid #ffc107 3px;
+    background: #333;
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -194,7 +201,9 @@
 }
 
 .leaderboard__container {
-    background: #ff8888;
+   background-color: #444;
+   border: solid #5c8fe6 5px;
+    color: white;
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -202,18 +211,19 @@
 }
 
 .student__item {
+    background-color: #444;
     display: flex;
     flex-direction: column;
     padding: 8px;
     width: 100%;
     border-radius: 8px;
-    background: #ffffff;
+ 
     gap: 8px;
     margin-bottom: 8px;
 }
 
 .session-info-btn, #moreStudentsBtn {
-    background: #6698F1;
+    background: #a1c3ff;
     border: none;
     padding: 4px 8px;
     border-radius: 4px;
@@ -265,9 +275,9 @@
     margin-bottom: 5px;
 }
 
-.first { height: 100%; background-color: #ffd700; }
-.second { height: 80%; background-color: #c0c0c0; }
-.third { height: 60%; background-color: #cd7f32; }
+.first { height: 100%; background-color: #333; border: 3px solid #6698F1}
+.second { height: 80%; background-color: #333; border: 3px solid #6698F1}
+.third { height: 60%; background-color: #333; border: 3px solid #6698F1}
 
 .leaderboard__table {
     width: 100%;
