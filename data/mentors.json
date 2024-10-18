@@ -1,0 +1,63 @@
+{
+    "faculty": {
+        "professors": [
+            {
+                "name": "Dr. Birmohan Singh",
+                "ed_qualification": [
+                    "Ph.D.",
+                    "M.E."
+                ],
+                "email": [
+                    "birmohansingh@sliet.ac.in",
+                    "birmohans@gmail.com"
+                ],
+                "phone": "+91-1672-253208"
+            }
+        ],
+        "associate_professors": [
+            {
+                "name": "Dr. Gurjinder Kaur",
+                "ed_qualification": [
+                    "B.E. Kyrgyz Technical University",
+                    "Bishkek M.S. BITS",
+                    "Pilani Ph.D SLIET",
+                    "Longowal"
+                ],
+                "email": [
+                    "gurjinder13@yahoo.com"
+                ],
+                "phone": "+91-1672-253326"
+            }
+        ],
+        "assistant_professors": [
+            {
+                "name": "Dr. Amar Nath",
+                "ed_qualification": [
+                    "Ph.D. in CSE from IIT Roorkee, Sept. 2020.",
+                    "Thesis 'A Distributed Approach for Collaborative Task Execution in Dynamic Environment'.",
+                    "M. Tech. in CSE from NIT Rourkela, June 2014.",
+                    "B. Tech. in CSE from  BIET Jhansi,  June 2006."
+                ],
+                "email": [
+                    "amarnath@sliet.ac.in"
+                ],
+                "phone": "01672-253610"
+            }
+        ],
+        "assistant_professors_contract": [
+            {
+                "name": "Dr. Jatinder Pal Singh",
+                "ed_qualification": [
+                    "B.Tech - Computer Science and Engineering",
+                    "M.Tech - Computer Science and Engineering",
+                    "Ph.D. - Computer Science and Engineering"
+                ],
+                "email": [
+                    "sachdeva.jp@gmail.com",
+                    "jatinderpalsingh@sliet.ac.in"
+                ],
+                "phone": ""
+            }
+        ]
+    }
+}
