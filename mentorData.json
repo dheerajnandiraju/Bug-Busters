@@ -1,0 +1,155 @@
+[
+    {
+      "name": "Dr. Birmohan Singh",
+      "expertise": "Medical Image Processing, Signal Processing, Machine Learning",
+      "experience": "30 years",
+      "research": "Focus on medical image processing, signal processing, and applications of machine learning in healthcare.",
+      "about": "Dr. Birmohan Singh is a professor in the Computer Science and Engineering Department with over 30 years of experience. His research focuses on the intersection of medical imaging and machine learning.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/5/6fc17d6735998f4f22a0e91fbf43b75c-bpfull.jpg"
+    },
+    {
+      "name": "Dr. B.S. Rakhra",
+      "expertise": "Wireless Networks, IoT, Network Security",
+      "experience": "25 years",
+      "research": "Specializes in wireless communication technologies, network security, and applications of IoT in secure communication systems.",
+      "about": "Dr. B.S. Rakhra is an experienced assistant professor with 25 years in the field of computer networks and IoT, contributing to advancements in secure communication systems.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/4/65783e7db0473-bpfull.jpg"
+    },
+    {
+      "name": "Dr. Rajesh Mehra",
+      "expertise": "VLSI Design, Digital Signal Processing",
+      "experience": "28 years",
+      "research": "Research interests include digital signal processing and optimization of VLSI systems for enhanced performance.",
+      "about": "Dr. Rajesh Mehra is a professor with nearly three decades of expertise in VLSI design and digital signal processing, aiming to innovate in circuit optimization.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/35/5e69c6be20c7e-bpfull.jpg"
+    },
+    {
+      "name": "Dr. Sarabjit Singh",
+      "expertise": "Network Security, Wireless Sensor Networks",
+      "experience": "15 years",
+      "research": "Focus on developing secure protocols for wireless sensor networks and enhancing network security measures.",
+      "about": "Dr. Sarabjit Singh is an assistant professor with a focus on enhancing the security of wireless communication systems through innovative research in sensor networks.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/6/605c66bd3e3bc-bpfull.jpg"
+    },
+    {
+      "name": "Dr. Rajinder Kaur",
+      "expertise": "Data Mining, Machine Learning",
+      "experience": "18 years",
+      "research": "Specializes in data mining techniques and the application of machine learning models for data analysis.",
+      "about": "Dr. Rajinder Kaur brings 18 years of teaching and research experience in data mining, contributing to advancements in predictive analytics and machine learning.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/14/5f2245e7a7f1bde5dee5bda48e09d411-bpfull.jpg"
+    },
+    {
+      "name": "Dr. Balwinder Singh",
+      "expertise": "Software Engineering, Cloud Computing",
+      "experience": "12 years",
+      "research": "Research in the development of scalable software systems and cloud-based solutions.",
+      "about": "With 12 years of experience, Dr. Balwinder Singh focuses on software engineering principles and cloud computing to create efficient software solutions.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/467/66b8bb350cc46-bpfull.jpg"
+    },
+    {
+      "name": "Dr. Rakesh Kumar",
+      "expertise": "Artificial Intelligence, Robotics",
+      "experience": "14 years",
+      "research": "Focus on AI-driven automation in robotics and intelligent systems for industrial applications.",
+      "about": "Dr. Rakesh Kumar, an assistant professor, combines expertise in artificial intelligence and robotics to advance research in intelligent automation.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/466/66f81ca30f4ff-bpfull.jpg"
+    },
+    {
+      "name": "Dr. Pardeep Singh",
+      "expertise": "Cyber Security, Cloud Computing",
+      "experience": "15 years",
+      "research": "Specializes in cloud security, encryption techniques, and building secure cloud infrastructures.",
+      "about": "Dr. Pardeep Singh is committed to improving cloud security measures and protecting data through his research in encryption and cybersecurity.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/16/66693282b6269-bpfull.jpg"
+    },
+    {
+      "name": "Dr. Vijay Kumar",
+      "expertise": "Big Data Analytics, Machine Learning",
+      "experience": "10 years",
+      "research": "Exploring efficient data processing techniques and applications of machine learning in big data environments.",
+      "about": "Dr. Vijay Kumar focuses on leveraging big data analytics and machine learning to extract valuable insights from large datasets.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/349/632d98c75d80f-bpfull.jpg"
+    },
+    {
+      "name": "Dr. Tajinder Singh",
+      "expertise": "Machine Learning, Text Mining",
+      "experience": "10 years",
+      "research": "Focuses on text mining techniques for extracting insights from social media and online content.",
+      "about": "Dr. Tajinder Singh is an assistant professor specializing in text mining and machine learning, applying his research to analyze social media data.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/468/64e3532d30fac-bpfull.jpg"
+    },
+    {
+      "name": "Dr. Preetpal Kaur Buttar",
+      "expertise": "Remote Sensing, Deep Learning",
+      "experience": "9 years",
+      "research": "Developing deep learning models for analyzing satellite imagery and environmental data.",
+      "about": "Dr. Preetpal Kaur Buttar focuses on remote sensing and deep learning, aiming to improve satellite image analysis for environmental applications.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/493/6165aace595a1-bpfull.jpg"
+    },
+    {
+      "name": "Dr. Jatinder Pal Singh",
+      "expertise": "Cloud Computing, Green Computing",
+      "experience": "12 years",
+      "research": "Research on optimizing energy consumption in cloud infrastructures using sustainable approaches.",
+      "about": "Dr. Jatinder Pal Singh is dedicated to creating sustainable solutions for cloud computing, focusing on green energy optimization.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/17/28b95ba0ed455dca378c1ada58307bf6-bpfull.jpg"
+    },
+    {
+      "name": "Rahul Gautam",
+      "expertise": "Computer Vision, Deep Learning",
+      "experience": "8 years",
+      "research": "Specializes in developing models for image recognition and object detection using deep learning.",
+      "about": "Rahul Gautam applies his expertise in computer vision and deep learning to solve complex challenges in image processing.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/36/e0a878e8162fd75cb5eb6929d98df5c1-bpfull.jpg"
+    },
+    {
+      "name": "Sukhpreet Singh",
+      "expertise": "Web Technologies, Data Mining",
+      "experience": "9 years",
+      "research": "Focuses on efficient data mining techniques and web-based application development.",
+      "about": "Sukhpreet Singh, with 9 years of experience, specializes in web technologies and data mining, contributing to the development of robust web solutions.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/350/666bf221c60a0-bpfull.jpg"
+    },
+    {
+      "name": "Chinu",
+      "expertise": "Image Processing, Computer Vision",
+      "experience": "7 years",
+      "research": "Works on enhancing image processing techniques for better feature extraction and analysis.",
+      "about": "Chinu focuses on computer vision and image processing, aiming to improve digital image analysis through advanced methods.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/344/64edd5a68d11b-bpfull.jpg"
+    },
+    {
+      "name": "Dr. Vikash Kumar Garg",
+      "expertise": "Big Data, Hadoop, MongoDB",
+      "experience": "6 years",
+      "research": "Research in the field of big data technologies, focusing on distributed data processing with Hadoop and MongoDB.",
+      "about": "Dr. Vikash Kumar Garg is skilled in big data technologies, with a focus on scalable data processing solutions using Hadoop and MongoDB.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/353/60544f9339252-bpfull.jpg"
+    },
+    {
+      "name": "Sunita Rani",
+      "expertise": "Deep Learning, Image Retrieval",
+      "experience": "4 years",
+      "research": "Specializes in deep learning models for effective image retrieval and processing.",
+      "about": "Sunita Rani's research is centered on applying deep learning to enhance image retrieval techniques, contributing to advancements in image processing.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/477/605067c46b9c6-bpfull.jpg"
+    },
+    {
+      "name": "Dr. Utkarsh",
+      "expertise": "Epidemic Modeling, Network Theory",
+      "experience": "5 years",
+      "research": "Research focuses on the application of mathematical models to study information propagation in networks.",
+      "about": "Dr. Utkarsh explores network theory and its applications in modeling information spread, aiming to improve our understanding of complex networks.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/457/605b0275612df-bpfull.jpg"
+    },
+    {
+      "name": "Dr. Vinod Kumar Verma",
+      "expertise": "Internet of Things, Wireless Sensor Networks",
+      "experience": "18 years",
+      "research": "Researches trust and reputation mechanisms for secure communication in IoT and wireless sensor networks.",
+      "about": "Dr. Vinod Kumar Verma brings 18 years of experience in IoT and sensor networks, focusing on building trust-based communication systems.",
+      "image": "http://sliet.ac.in/wp-content/uploads/avatars/516/64ed97380a462-bpfull.jpg"
+    }
+  ]
+  
