@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MyBlog - None</title>
+    </head>
+    <body>
+        <style>
+            .profile-dashboard {
+              display: flex;
+              flex-direction: column;
+              overflow: hidden;
+              padding: 18px 48px 68px;
+            }
+            
+            @media (max-width: 991px) {
+              .profile-dashboard {
+                padding: 0 20px;
+              }
+            }
+            
+            .header-container {
+              display: flex;
+              width: 100%;
+              align-items: flex-start;
+              gap: 20px;
+              flex-wrap: wrap;
+              justify-content: space-between;
+            }
+            
+            @media (max-width: 991px) {
+              .header-container {
+                max-width: 100%;
+              }
+            }
+            
+            .logo {
+              aspect-ratio: 1.07;
+              object-fit: contain;
+              object-position: center;
+              width: 129px;
+              margin-top: 11px;
+              max-width: 100%;
+            }
+            
+            .nav-container {
+              display: flex;
+              margin-top: 6px;
+              align-items: flex-start;
+              gap: 27px;
+              color: #fff;
+              white-space: nowrap;
+              font: 800 20px Inter, sans-serif;
+            }
+            
+            @media (max-width: 991px) {
+              .nav-container {
+                white-space: initial;
+              }
+            }
+            
+            .nav-item {
+              display: flex;
+              margin-top: 7px;
+              flex-direction: column;
+            }
+            
+            @media (max-width: 991px) {
+              .nav-item {
+                white-space: initial;
+              }
+            }
+            
+            .nav-icon {
+              aspect-ratio: 1;
+              object-fit: contain;
+              object-position: center;
+              width: 70px;
+              border-radius: 57px;
+              align-self: center;
+            }
+            
+            .nav-text {
+              align-self: flex-start;
+              margin-left: 10px;
+            }
+            
+            .user-actions {
+              display: flex;
+              gap: 30px;
+            }
+            
+            .user-icon {
+              aspect-ratio: 1;
+              object-fit: contain;
+              object-position: center;
+              width: 68px;
+              border-radius: 55px;
+              margin: auto 0;
+            }
+            
+            .notification-icon {
+              aspect-ratio: 1;
+              object-fit: contain;
+              object-position: center;
+              width: 80px;
+              border-radius: 50px;
+            }
+            
+            .main-content {
+              align-self: center;
+              margin-top: 58px;
+              width: 100%;
+              max-width: 1285px;
+            }
+            
+            @media (max-width: 991px) {
+              .main-content {
+                max-width: 100%;
+                margin-top: 40px;
+              }
+            }
+            
+            .content-wrapper {
+              gap: 20px;
+              display: flex;
+            }
+            
+            @media (max-width: 991px) {
+              .content-wrapper {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+              }
+            }
+            
+            .sidebar {
+              display: flex;
+              flex-direction: column;
+              line-height: normal;
+              width: 24%;
+              margin-left: 0;
+            }
+            
+            @media (max-width: 991px) {
+              .sidebar {
+                width: 100%;
+              }
+            }
+            
+            .profile-card {
+              display: flex;
+              width: 80%;
+              flex-direction: column;
+              margin-right: 80px;
+            }
+            
+            @media (max-width: 991px) {
+              .profile-card {
+                margin-top: 37px;
+              }
+            }
+            
+            .profile-info {
+              border-radius: 25px;
+              background-color: #323232;
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              overflow: hidden;
+              font-family: Roboto Condensed, sans-serif;
+              color: #fff;
+              font-weight: 800;
+              white-space: nowrap;
+              padding: 33px 36px;
+            }
+            
+            @media (max-width: 991px) {
+              .profile-info {
+                white-space: initial;
+                padding: 0 20px;
+              }
+            }
+            
+            .profile-picture {
+              aspect-ratio: 1;
+              object-fit: contain;
+              object-position: center;
+              width: 168px;
+              border-radius: 50px;
+              align-self: center;
+              max-width: 100%;
+            }
+            
+            .name-location {
+              display: flex;
+              margin-top: 17px;
+              gap: 16px;
+            }
+            
+            @media (max-width: 991px) {
+              .name-location {
+                white-space: initial;
+              }
+            }
+            
+            .name {
+              font-size: 42px;
+              flex-grow: 1;
+            }
+            
+            .location {
+              display: flex;
+              gap: 7px;
+              font-size: 24px;
+              margin: auto 0;
+            }
+            
+            @media (max-width: 991px) {
+              .location {
+                white-space: initial;
+              }
+            }
+            
+            .location-icon {
+              aspect-ratio: 1;
+              object-fit: contain;
+              object-position: center;
+              width: 30px;
+            }
+            
+            .resume-button {
+              border-radius: 25px;
+              background-color: #323232;
+              width: 19vw;
+              margin-top: 19px;
+              overflow: hidden;
+              color: #fff;
+              padding: 15px 67px;
+              font: 800 24px Roboto Condensed, -apple-system, Roboto, Helvetica, sans-serif;
+            }
+            
+            @media (max-width: 991px) {
+              .resume-button {
+                padding: 0 20px;
+              }
+            }
+            
+            .skills-section {
+              border-radius: 25px;
+              background-color: #323232;
+              display: flex;
+              margin-top: 17px;
+              width: 17vw;
+              flex-direction: column;
+              overflow: hidden;
+              align-items: flex-start;
+              color: #fff;
+              padding: 18px 17px;
+              font: 400 16px Roboto Condensed, -apple-system, Roboto, Helvetica, sans-serif;
+            }
+            
+            @media (max-width: 991px) {
+              .skills-section {
+                margin-left: 3px;
+                padding-right: 20px;
+              }
+            }
+            
+            .skills-title {
+              font-size: 32px;
+              font-weight: 800;
+            }
+            
+            @media (max-width: 991px) {
+              .skills-title {
+                margin-left: 9px;
+              }
+            }
+            
+            .skills-row {
+              display: flex;
+              margin-top: 7px;
+              gap: 15px;
+            }
+            
+            .skill-tag {
+              border-radius: 22px;
+              background-color: #454545;
+              overflow: hidden;
+              padding: 5px 16px;
+              border: 1px solid #fff;
+            }
+            
+            .social-section {
+              border-radius: 25px;
+              background-color: #323232;
+              align-self: flex-start;
+              display: flex;
+              gap: 11px;
+              overflow: hidden;
+              margin-top: 20px;
+              width: 16.5vw;
+              padding: 14px 22px 0;
+            }
+            
+            @media (max-width: 991px) {
+              .social-section {
+                margin-left: 10px;
+                padding-right: 20px;
+              }
+            }
+            
+            .social-content {
+              display: flex;
+              flex-direction: column;
+            }
+            
+            .social-title {
+              color: #fff;
+              font: 800 32px Roboto Condensed, -apple-system, Roboto, Helvetica, sans-serif;
+            }
+            
+            .social-icons {
+              align-self: flex-start;
+              display: flex;
+              margin-top: 6px;
+              gap: 34px;
+              margin: 10px;
+            }
+            
+            .social-icon {
+              aspect-ratio: 1.05;
+              object-fit: contain;
+              object-position: center;
+              width: 59px;
+              align-self: flex-start;
+            }
+            
+            .main-column {
+              display: flex;
+              flex-direction: column;
+              line-height: normal;
+              width: 76%;
+              margin-left: 20px;
+            }
+            
+            @media (max-width: 991px) {
+              .main-column {
+                width: 100%;
+              }
+            }
+            
+            .main-content-wrapper {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+            }
+            
+            @media (max-width: 991px) {
+              .main-content-wrapper {
+                max-width: 100%;
+                margin-top: 37px;
+              }
+            }
+            
+            .about-section {
+              border-radius: 25px;
+              background-color: #323232;
+              display: flex;
+              flex-direction: column;
+              overflow: hidden;
+              align-items: flex-start;
+              font-family: Roboto Condensed, sans-serif;
+              color: #fff;
+              font-weight: 800;
+              padding: 29px 80px 29px 30px;
+            }
+            
+            @media (max-width: 991px) {
+              .about-section {
+                max-width: 100%;
+                padding: 0 20px;
+              }
+            }
+            
+            .about-title {
+              font-size: 32px;
+            }
+            
+            .about-description {
+              font-size: 24px;
+              margin-top: 12px;
+            }
+            
+            @media (max-width: 991px) {
+              .about-description {
+                max-width: 100%;
+              }
+            }
+            
+            .videos-section {
+              border-radius: 25px;
+              background-color: #323232;
+              margin-top: 17px;
+              overflow: hidden;
+              padding: 29px 80px 29px 30px;
+            }
+            
+            @media (max-width: 991px) {
+              .videos-section {
+                max-width: 100%;
+                padding: 0 20px;
+              }
+            }
+            
+            .videos-content {
+              gap: 20px;
+              display: flex;
+            }
+            
+            @media (max-width: 991px) {
+              .videos-content {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+              }
+            }
+            
+            .video-column {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+            }
+            
+            @media (max-width: 991px) {
+              .video-column {
+                width: 100%;
+              }
+            }
+            
+            .video-wrapper {
+              width: 33vh;
+              
+            }
+            
+            @media (max-width: 991px) {
+              .video-wrapper {
+                margin-top: 40px;
+              }
+            }
+            
+            .videos-title {
+              color: #fff;
+              font: 800 32px Roboto Condensed, -apple-system, Roboto, Helvetica, sans-serif;
+            }
+            
+            .video-thumbnail {
+              display: flex;
+              flex-direction: column;
+              border-radius: 12px;
+              align-self: stretch;
+              position: relative;
+              aspect-ratio: 1.777;
+              margin-top: 13px;
+              width: 100%;
+              align-items: center;
+              justify-content: center;
+              padding: 60px 70px;
+            }
+            
+            @media (max-width: 991px) {
+              .video-thumbnail {
+                padding: 0 20px;
+              }
+            }
+            
+            .video-bg {
+              position: absolute;
+              inset: 0;
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+            
+            .play-button {
+              position: relative;
+              background-color: rgba(217, 217, 217, 0.5);
+              border-radius: 50%;
+              display: flex;
+              width: 78px;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              height: 78px;
+              padding: 0 13px;
+            }
+            
+            .play-icon {
+              aspect-ratio: 1;
+              object-fit: contain;
+              object-position: center;
+              width: 100%;
+            }
+            
+            .video-title {
+              color: #fff;
+              margin-top: 12px;
+              font: 800 24px Roboto Condensed, -apple-system, Roboto, Helvetica, sans-serif;
+            }
+            
+            .courses-leaderboard {
+              width: 100%;
+              margin-top: 20px;
+            }
+            
+            @media (max-width: 991px) {
+              .courses-leaderboard {
+                max-width: 100%;
+              }
+            }
+            
+            .courses-leaderboard-content {
+              gap: 90px;
+              display: flex;
+            }
+            
+            @media (max-width: 991px) {
+              .courses-leaderboard-content {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+              }
+            }
+            
+            .courses-column {
+              display: flex;
+              flex-direction: column;
+              line-height: normal;
+              width: 48%;
+              margin-left: 0;
+            }
+            
+            @media (max-width: 991px) {
+              .courses-column {
+                width: 100%;
+              }
+            }
+            
+            .courses-section {
+              border-radius: 25px;
+              background-color: #323232;
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              overflow: hidden;
+              align-items: flex-start;
+              font-family: Roboto Condensed, sans-serif;
+              color: #fff;
+              margin: 0 auto;
+              padding: 24px 80px 24px 19px;
+            }
+            
+            @media (max-width: 991px) {
+              .courses-section {
+                max-width: 100%;
+                margin-top: 22px;
+                padding-right: 20px;
+              }
+            }
+            
+            .courses-title {
+              font-size: 32px;
+              font-weight: 800;
+            }
+            
+            .course-list {
+              display: flex;
+              margin-top: 27px;
+              align-items: flex-start;
+              gap: 16px;
+              font-size: 24px;
+              font-weight: 400;
+            }
+            
+            .course-tag {
+              border-radius: 51px;
+              background-color: #454545;
+              overflow: hidden;
+              white-space: nowrap;
+              padding: 14px 26px;
+              border: 1px solid #fff;
+            }
+            
+            @media (max-width: 991px) {
+              .course-tag {
+                white-space: initial;
+                padding: 0 20px;
+              }
+            }
+            
+            .leaderboard-column {
+              display: flex;
+              flex-direction: column;
+              line-height: normal;
+              width: 37%;
+              margin-left: 20px;
+            }
+            
+            @media (max-width: 991px) {
+              .leaderboard-column {
+                width: 100%;
+              }
+            }
+            
+            .leaderboard-section {
+              border-radius: 25px;
+              background-color: #323232;
+              display: flex;
+              flex-grow: 1;
+              gap: 11px;
+              overflow: hidden;
+              color: #fff;
+              width: 100%;
+              padding: 20px 21px 2px;
+              font: 800 28px Roboto Condensed, -apple-system, Roboto, Helvetica, sans-serif;
+            }
+            
+            @media (max-width: 991px) {
+              .leaderboard-section {
+                margin-top: 22px;
+                padding-right: 20px;
+              }
+            }
+            
+            .leaderboard-content {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+            }
+            
+            .leaderboard-title {
+              font-size: 32px;
+            }
+            
+            .leaderboard-stats {
+              align-self: stretch;
+              display: flex;
+              align-items: flex-start;
+              gap: 20px;
+              justify-content: space-between;
+            }
+            
+            .highest-score {
+              align-self: flex-start;
+            }
+            
+            .score-bar {
+              border-radius: 7px;
+              background-color: #d9d9d9;
+              align-self: flex-end;
+              display: flex;
+              margin-top: 22px;
+              width: 46px;
+              height: 50px;
+            }
+            
+            .current-score-bar {
+              border-radius: 7px;
+              background-color: #d9d9d9;
+              align-self: flex-end;
+              display: flex;
+              margin-top: 52px;
+              width: 46px;
+              height: 95px;
+            }
+            
+            @media (max-width: 991px) {
+              .current-score-bar {
+                margin-top: 40px;
+              }
+            }
+            
+            .visually-hidden {
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              padding: 0;
+              margin: -1px;
+              overflow: hidden;
+              clip: rect(0, 0, 0, 0);
+              white-space: nowrap;
+              border: 0;
+            }
+            </style>
+            
+            <section class="profile-dashboard">
+              <header class="header-container">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0862ce9cf035a1287413e20a329a2c1ca36177e3b0561f5dfed704bda3cb7077?placeholderIfAbsent=true&apiKey=57592b8a463a475db413a7b20489d30f" alt="Logo" class="logo" />
+                <nav class="nav-container">
+                  <div class="nav-item">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9078dd35646bc44aca5bc63ea8e82a4d4767d9e08b7c86d72209f5bbc83e3334?placeholderIfAbsent=true&apiKey=57592b8a463a475db413a7b20489d30f" alt="Dashboard icon" class="nav-icon" />
+                    <span class="nav-text">Dashboard</span>
+                  </div>
+                  <div class="nav-item">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f978806d3cb67929148aba29f4207944de5f380f9fefe48cfef0fd2b7810845a?placeholderIfAbsent=true&apiKey=57592b8a463a475db413a7b20489d30f" alt="Wallet icon" class="nav-icon" />
+                    <span class="nav-text">Wallet</span>
+                  </div>
+                  <div class="nav-item">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/543802dd9640e49899d9e8fd5ce52477d20d1c56d65947d3274f7a6f674fb269?placeholderIfAbsent=true&apiKey=57592b8a463a475db413a7b20489d30f" alt="Blogs icon" class="nav-icon" />
+                    <span class="nav-text">Blogs</span>
+                  </div>
+                </nav>
+                <div class="user-actions">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/800ed6be25ba0b89181d6660257064dca2aaac08b7a3e32b77cfed210e91c591?placeholderIfAbsent=true&apiKey=57592b8a463a475db413a7b20489d30f" alt="User profile" class="user-icon" />
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/91d8faee7569ceac4473c2ca58a503b472799bbb1c9827813810c16d55651119?placeholderIfAbsent=true&apiKey=57592b8a463a475db413a7b20489d30f" alt="Notifications" class="notification-icon" />
+                </div>
+              </header>
+            
+              <main class="main-content">
+                <div class="content-wrapper">
+                  <aside class="sidebar">
+                    <div class="profile-card">
+                      <div class="profile-info">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/592831fbc6671e4ddcca4c28487cd8254cfecda94383da322aae2b1e5d28c3ea?placeholderIfAbsent=true&apiKey=57592b8a463a475db413a7b20489d30f" alt="Profile picture" class="profile-picture" />
+                        <div class="name-location">
+                          <h2 class="name">Robert</h2>
+                          <div class="location">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fbbf4c7e4cf91dd594859650baadfce725761b44ee5b7e486d4f511d00bd08f7?placeholderIfAbsent=true&apiKey=57592b8a463a475db413a7b20489d30f" alt="Location icon" class="location-icon" />
+                            <span>USA</span>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="resume-button">View My Resume</button>
+                      <div class="skills-section">
+                        <h3 class="skills-title">Skills</h3>
+                        <div class="skills-row">
+                          <span class="skill-tag">Full stack</span>
+                          <span class="skill-tag">UI/UX</span>
+                        </div>
+                        <div class="skills-row">
+                          <span class="skill-tag">Git/Github</span>
+                          <span class="skill-tag">Visual Studio Code</span>
+                        </div>
+                        <div class="skills-row">
+                          <span class="skill-tag">Docker</span>
+                          <span class="skill-tag">Google Analytics</span>
+                        </div>
+                        <div class="skills-row">
+                          <span class="skill-tag">SQL</span>
+                          <span class="skill-tag">DSA</span>
+                          <span class="skill-tag">Art & Craft</span>
+                        </div>
+                      </div>
+                      <div class="social-section">
+                        <div class="social-content">
+                          <h3 class="social-title">Let's socialize</h3>
+                          <div class="social-icons">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/38f11d1b09e8e3325a4921bf14258e34b6955037abeed1cbf607a4ada20dd4ec?placeholderIfAbsent=true&apiKey=57592b8a463a475db413a7b20489d30f" alt="Social icon 1" class="social-icon" />
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/bce47879a18d9fc6176c0a55652b2f5d9eb3e8fb1e9e1ad6587b939d398086ad?placeholderIfAbsent=true&apiKey=57592b8a463a475db413a7b20489d30f" alt="Social icon 2" class="social-icon" />
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/66bb18a966c563080f1be8020af3e7011535d66453d596cdca88a8bb8fbbf7d9?placeholderIfAbsent=true&apiKey=57592b8a463a475db413a7b20489d30f" alt="Social icon 3" class="social-icon" />
+                          </div>
+                        </div>
+                       
+                      </div>
+                    </div>
+                  </aside>
+            
+                  <div class="main-column">
+                    <div class="main-content-wrapper">
+                      <section class="about-section">
+                        <h2 class="about-title">About Me</h2>
+                        <p class="about-description">
+                          As a 10 year veteran in Software development, I've mentored many to achieve their career goals. I offer personalized guidance and support to help you reach your full potential. Let's work together to unlock your success.
+                        </p>
+                      </section>
+                      <section class="videos-section">
+                        <div>
+                            <h3 class="videos-title">Demo videos</h3>
+                          <div class="video-column">
+                            
+                            <div class="video-wrapper">
+                              
+                              <div class="video-thumbnail">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6443d28024ef5f464ca1734a505c3afa961371d801b0cac1e8c6f979ce15f950?placeholderIfAbsent=true&apiKey=57592b8a463a475db413a7b20489d30f" alt="Video thumbnail" class="video-bg" />
+                                
+                              </div>
+                              <h4 class="video-title">Full stack development</h4>
+                            </div>
+                            <div class="video-wrapper">
+                                <div class="video-thumbnail">
+                                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/233237a8c2c6017f8281eb1ab381bc7e714f6bc5d525e75b24cc31373350f93c?placeholderIfAbsent=true&apiKey=57592b8a463a475db413a7b20489d30f" alt="Video thumbnail" class="video-bg" />
+                                </div>
+                                <h4 class="video-title">Data structures and algorithms</h4>
+                              </div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="courses-leaderboard">
+                      <div class="courses-leaderboard-content">
+                        <div class="courses-column">
+                          <section class="courses-section">
+                            <h3 class="courses-title">Courses offered</h3>
+                            <div class="course-list">
+                              <span class="course-tag">DSA</span>
+                              <span class="course-tag">Full Stack</span>
+                              <span class="course-tag">Resume building</span>
+                            </div>
+                          </section>
+                        </div>
+                        <div class="leaderboard-column">
+                          <section class="leaderboard-section">
+                            <div class="leaderboard-content">
+                              <h3 class="leaderboard-title">Leaderboard</h3>
+                              <div>Current: 97</div>
+                              <div class="leaderboard-stats">
+                                <div class="highest-score">Highest: 92</div>
+                                <div class="score-bar"></div>
+                              </div>
+                            </div>
+                            <div class="current-score-bar"></div>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </section>
+    </body>
+</html>
