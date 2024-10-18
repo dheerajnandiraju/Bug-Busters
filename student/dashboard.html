@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1c1c1c;
+            color: #ffffff;
+        }
+        header {
+            background-color: #2c2c2c;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .user-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .user-actions a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .notification-count {
+            background-color: #ff0000;
+            color: #ffffff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .mentor-list {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .search-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .search-container input {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-container button {
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mentor-card {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .mentor-card.sponsored {
+            background-color: #4169e1;
+        }
+        .mentor-card.yellow {
+            background-color: #ffd700;
+        }
+        .mentor-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .mentor-info {
+            flex: 1;
+        }
+        .mentor-card h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .mentor-card p {
+            margin: 5px 0;
+        }
+        .mentor-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .mentor-actions button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .filter-sidebar {
+            width: 300px;
+            background-color: #ff69b4;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        .filter-group h3 {
+            margin-top: 0;
+        }
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .filter-option {
+            background-color: #2c2c2c;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .mentor-list, .filter-sidebar {
+                width: 100%;
+                margin-right: 0;
+            }
+            .filter-sidebar {
+                margin-top: 20px;
+            }
+            main {
+                flex-direction: column;
+            }
+            .mentor-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .mentor-actions {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .search-container {
+                flex-direction: column;
+                gap: 5px;
+            }
+            .mentor-card img {
+                width: 60px;
+                height: 60px;
+                margin-right: 10px;
+            }
+            .mentor-info h2 {
+                font-size: 16px;
+            }
+            .mentor-card p {
+                font-size: 14px;
+            }
+            .mentor-actions button {
+                padding: 5px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">2A</a>
+        <nav>
+            <ul>
+                <li><a href="#"><img src="dashboard-icon.svg" alt="Dashboard" width="20" height="20">Dashboard</a></li>
+                <li><a href="#"><img src="mentor-list-icon.svg" alt="Mentor list" width="20" height="20">Mentor list</a></li>
+                <li><a href="#"><img src="students-icon.svg" alt="Students" width="20" height="20">Students</a></li>
+                <li><a href="#"><img src="internship-icon.svg" alt="Internship" width="20" height="20">Internship</a></li>
+                <li><a href="#"><img src="wallet-icon.svg" alt="Wallet" width="20" height="20">Wallet</a></li>
+                <li><a href="#"><img src="blogs-icon.svg" alt="Blogs" width="20" height="20">Blogs</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="#" class="notifications"><img src="bell-icon.svg" alt="Notifications" width="20" height="20"></a>
+            <span class="notification-count">27</span>
+            <a href="#" class="streak"><img src="fire-icon.svg" alt="Streak" width="20" height="20"></a>
+            <a href="#" class="profile"><img src="profile-icon.svg" alt="Profile" width="20" height="20"></a>
+        </div>
+    </header>
+    <main>
+        <div class="mentor-list">
+            <div class="search-container">
+                <input type="text" placeholder="search by name, domain..etc">
+                <button class="filter"><img src="filter-icon.svg" alt="Filter" width="20" height="20"></button>
+                <button class="search"><img src="search-icon.svg" alt="Search" width="20" height="20"></button>
+            </div>
+            <div class="mentor-card sponsored">
+                <img src="/placeholder.svg?height=80&width=80" alt="Marcus Robin">
+                <div class="mentor-info">
+                    <h2>Marcus Robin <span>English, Spanish</span></h2>
+                    <p>Web development</p>
+                    <p>★4.3 (500+ mentees) 📍 LA, USA</p>
+                </div>
+                <div class="mentor-actions">
+                    <p>$110</p>
+                    <button>Schedule</button>
+                    <button>Profile</button>
+                </div>
+            </div>
+            <div class="mentor-card yellow">
+                <img src="/placeholder.svg?height=80&width=80" alt="Jennefer">
+                <div class="mentor-info">
+                    <h2>Jennefer <span>Spanish</span></h2>
+                    <p>Front-End development</p>
+                    <p>★4.7 (300+ mentees) 📍 NYC, USA</p>
+                </div>
+                <div class="mentor-actions">
+                    <p>$97 Coins/Month</p>
+                    <button>Schedule</button>
+                    <button>Profile</button>
+                </div>
+            </div>
+            <div class="mentor-card sponsored">
+                <img src="/placeholder.svg?height=80&width=80" alt="Robert">
+                <div class="mentor-info">
+                    <h2>Robert <span>English, Spanish, French</span></h2>
+                    <p>UI/UX Designer</p>
+                    <p>★4.9 (600+ mentees) 📍 NYC, USA</p>
+                </div>
+                <div class="mentor-actions">
+                    <p>$107 Coins/Month</p>
+                    <button>Schedule</button>
+                    <button>Profile</button>
+                </div>
+            </div>
+        </div>
+        <div class="filter-sidebar">
+            <div class="filter-group">
+                <h3>Filter by</h3>
+                <select name="domain">
+                    <option value="">Domain</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="front-end">Front-end</option>
+                    <option value="ui-ux">UI/UX</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <h3>Offering Mentorship For</h3>
+                <label><input type="checkbox" name="students"> Students</label>
+                <label><input type="checkbox" name="freshers"> Freshers</label>
+                <label><input type="checkbox" name="working-professionals"> Working Professionals</label>
+            </div>
+            <div class="filter-group">
+                <h3>Skills</h3>
+                <select name="skills">
+                    <option value="">eg: DSA, Java, SQL, etc</option>
+                </select>
+                <div class="filter-options">
+                    <span class="filter-option">DSA</span>
+                    <span class="filter-option">Java</span>
+                    <span class="filter-option">Python</span>
+                    <span class="filter-option">SQL</span>
+                    <span class="filter-option">Docker</span>
+                    <span class="filter-option">Java SpringBoot</span>
+                    <span class="filter-option">Machine Learning</span>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h3>Tools</h3>
+                <select name="tools">
+                    <option value="">eg: Figma, WIX, git...etc</option>
+                </select>
+                <div class="filter-options">
+                    <span class="filter-option">Figma</span>
+                    <span class="filter-option">WIX</span>
+                    <span class="filter-option">Git/Github</span>
+                    <span class="filter-option">MS Office</span>
+                    <span class="filter-option">Visual Studio Code</span>
+                    <span class="filter-option">Google Analytics</span>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h3>Languages</h3>
+                <!-- Add language options here -->
+            </div>
+        </div>
+    </main>
+    <script>
+        // Add any necessary JavaScript here
+    </script>
+</body>
+</html>
