@@ -83,6 +83,12 @@ body  {
     margin-left: 25px;
 }
 
+.navbar__extras {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .button {
     background-color: #9b9b9be8;
     color: #111111;
@@ -96,6 +102,16 @@ body  {
 
 .button:hover {
     background-color: #0056b3;
+}
+
+.button, .icon {
+    margin-left: 8px;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
 }
 
 .navbar__toggle {
