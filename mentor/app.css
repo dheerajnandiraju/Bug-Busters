@@ -300,6 +300,7 @@
 @media screen and (max-width: 1024px) {
     .main__content .schedule__container {
         width: 100%;
+        display: none;
     }
 
     .domains__grid {
@@ -329,18 +330,11 @@
     }
 
     .students__container, .leaderboard__container {
-        width: 100%;
+        width: 100vw;
+    }
+    .secondary__content{
+        width: 100vw;
     }
 }
 
-.leaderboard__container {
-    width: 100%; /* Adjust the width to take more space */
-    background-color: #444;
-    border: solid #5c8fe6 5px;
-    color: white;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1;
-}
 
