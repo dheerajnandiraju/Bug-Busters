@@ -18,25 +18,22 @@ body, html {
 }
 
 .logo img {
-    width: 9rem;
+    width: 8rem;
     height: auto;
 }
-
 
 .container {
     text-align: center;
     color: #fff;
     position: relative;
- 
- 
 }
 
-h1{
+h1 {
     margin: 0;
     font-size: 400%;
 }
 
-h2{
+h2 {
     margin: 1rem 0;
     font-size: 200%;
 }
@@ -47,9 +44,8 @@ h2{
     justify-content: center;
     gap: 10px;
     position: absolute;
-    bottom: 5rem;
+    bottom: 2rem;
     align-items: center;
-   
 }
 
 .dot {
@@ -65,7 +61,7 @@ h2{
     background-color: #007bff; /* Blue for active step */
 }
 
-a{
+a {
     color: rgb(219, 219, 219);
     font-size: xx-large;
     text-decoration: none;
@@ -101,5 +97,48 @@ a{
 .role-button:hover {
     background-color: #6a6a6a; /* Change background on hover */
     border-color: #000000; /* Change border color on hover */
+}
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .role-button {
+        font-size: 200%;
+        padding: 8px 16px;
+    }
+
+    h2 {
+        font-size: 150%;
+    }
+
+    .buttons {
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    .dots {
+        bottom: 3rem;
+    }
+
+    .logo img {
+        width: 6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .role-button {
+        font-size: 150%;
+        padding: 6px 12px;
+    }
+
+    h2 {
+        font-size: 120%;
+    }
+
+    .dots {
+        gap: 8px;
+    }
+
+    a {
+        font-size: large;
+    }
 }
