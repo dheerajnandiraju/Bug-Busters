@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internship Dashboard</title>
+    <link rel="stylesheet" href="../styles.css">
     <style>
         :root {
             --bg-dark: #1a1a1a;
@@ -21,11 +22,7 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-        }
+       
 
         .container {
             max-width: 1200px;
@@ -33,40 +30,7 @@
             padding: 0 20px;
         }
 
-        nav {
-            background-color: var(--bg-card);
-            padding: 10px 0;
-        }
-
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-link {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            color: var(--text-light);
-            text-decoration: none;
-        }
-
-        .nav-icon {
-            width: 20px;
-            height: 20px;
-            background-color: #555;
-        }
+        
 
         .user-actions {
             display: flex;
@@ -242,25 +206,62 @@
     </style>
 </head>
 <body>
-    <nav>
-        <div class="container nav-content">
-            <div class="logo">2A</div>
-            <div class="nav-links">
-                <a href="#" class="nav-link"><span class="nav-icon"></span>Dashboard</a>
-                <a href="#" class="nav-link"><span class="nav-icon"></span>Mentor list</a>
-                <a href="#" class="nav-link"><span class="nav-icon"></span>Students</a>
-                <a href="#" class="nav-link"><span class="nav-icon"></span>Internship</a>
-                <a href="#" class="nav-link"><span class="nav-icon"></span>Wallet</a>
-                <a href="#" class="nav-link"><span class="nav-icon"></span>Blogs</a>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar__container">
+                    <a href="index.html" id="navbar__logo">
+                        <img src="/assets/images/web logo.png" alt="2 Steps Ahead Logo">
+                    </a>
+                    <div class="navbar__toggle" id="mobile-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="navbar__menu">
+                        <li class="navbar__item">
+                            
+                            <a href="/student/dashboard.html" class="navbar__links" id="home-page">
+                                <img src="\assets\images\dashboard -logo.png" alt="">
+                                Dashboard</a>
+                        </li>
+                        <li class="navbar__item">
+                            
+                            <a href="/student/mentorlist.html" class="navbar__links" id="wallet-page">
+                                <img src="/assets//images/mentors-list.png" alt="">Mentor List</a>
+                        </li>
+                        <li class="navbar__item">
+                            
+                            <a href="../student/internships.html" class="navbar__links" id="blogs-page">
+                                <img src="../assets/images/internship.png" alt="">Internships</a>
+                        </li>
+                    </ul>
+                    <a href="/startingpages/studentMentor/studentMentor.html">
+                    <button style="padding: 10px;border-radius: 8px;width: 6vw;height: 5vh;background-color: red;color: white;border-width: 0px;cursor: pointer;">
+                        Logout
+                    </button>
+                </a>
+                    <div class="navbar__extras">
+                        <div class="nav-icons">
+                            <div class="notification">
+                                <img src="../assets/images/notification.png" alt="Notifications">
+                                <span class="badge">1</span>
+                            </div>
+                            <div class="points">
+                                <span>27</span>
+                                <img src="../assets/images/streak (1).png" alt="Points">
+                            </div>
+                            <a href="../StudentProfile/studenprofile.html">
+                                <div class="profile">
+                                    <img src="../assets/images/solo-session.png" alt="Profile Picture">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="user-actions">
-                <span class="nav-icon"></span>
-                <span class="notification-count">27</span>
-                <span class="nav-icon"></span>
-                <div class="user-avatar"></div>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <div class="container">
         <main>
@@ -384,5 +385,16 @@
             </div>
         </main>
     </div>
+    
+</script>
+<script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navMenu = document.querySelector('.navbar__menu');
+
+  mobileMenu.addEventListener('click', function() {
+      mobileMenu.classList.toggle('is-active');
+      navMenu.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
