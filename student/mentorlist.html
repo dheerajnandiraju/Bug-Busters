@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentor List</title>
     <style>
+        /* Add your existing CSS here for styling */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -186,6 +187,13 @@
             font-size: 16px;
         }
 
+        .mentor-card button.booked {
+        background-color: #ff0000;
+        color: white;
+        cursor: not-allowed;
+        }
+
+
         .mentor-card button {
             margin-top: 15px;
             padding: 10px 20px;
@@ -215,7 +223,6 @@
         }
 
         /* Media Queries for Responsiveness */
-
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -276,110 +283,295 @@
 </head>
 
 <body>
-    <header>
-        <a href="#" class="logo">2A</a>
-        <nav>
-            <ul>
-                <li><a href="#"><img src="dashboard-icon.svg" alt="Dashboard" width="20" height="20">Dashboard</a></li>
-                <li><a href="#"><img src="mentor-list-icon.svg" alt="Mentor list" width="20" height="20">Mentor list</a></li>
-                <li><a href="#"><img src="students-icon.svg" alt="Students" width="20" height="20">Students</a></li>
-                <li><a href="#"><img src="internship-icon.svg" alt="Internship" width="20" height="20">Internship</a></li>
-                <li><a href="#"><img src="wallet-icon.svg" alt="Wallet" width="20" height="20">Wallet</a></li>
-                <li><a href="#"><img src="blogs-icon.svg" alt="Blogs" width="20" height="20">Blogs</a></li>
-            </ul>
-        </nav>
-        <div class="user-actions">
-            <a href="#" class="notifications"><img src="bell-icon.svg" alt="Notifications" width="20" height="20"></a>
-            <span class="notification-count">27</span>
-            <a href="#" class="streak"><img src="fire-icon.svg" alt="Streak" width="20" height="20"></a>
-            <a href="#" class="profile"><img src="profile-icon.svg" alt="Profile" width="20" height="20"></a>
-        </div>
-    </header>
-    <main>
-        <div class="search-container" style="margin-bottom: 20px">
-            <input type="text" placeholder="Search by name, domain..etc">
-            <button class="filter"><img src="filter-icon.svg" alt="Filter" width="20" height="20"></button>
-            <button class="search"><img src="search-icon.svg" alt="Search" width="20" height="20"></button>
-        </div>
-        <div class="filter-options">
-            <div class="filter-group">
-                <h3>Filter by</h3>
-                <select name="domain">
-                    <option value="">Domain</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="data-science">Data Science</option>
-                    <option value="machine-learning">Machine Learning</option>
-                </select>
+        <header>
+            <a href="#" class="logo">2A</a>
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="dashboard-icon.svg" alt="Dashboard" width="20" height="20">Dashboard</a></li>
+                    <li><a href="#"><img src="mentor-list-icon.svg" alt="Mentor list" width="20" height="20">Mentor list</a></li>
+                    <li><a href="#"><img src="students-icon.svg" alt="Students" width="20" height="20">Students</a></li>
+                    <li><a href="#"><img src="internship-icon.svg" alt="Internship" width="20" height="20">Internship</a></li>
+                    <li><a href="#"><img src="wallet-icon.svg" alt="Wallet" width="20" height="20">Wallet</a></li>
+                    <li><a href="#"><img src="blogs-icon.svg" alt="Blogs" width="20" height="20">Blogs</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" class="notifications"><img src="bell-icon.svg" alt="Notifications" width="20" height="20"></a>
+                <span class="notification-count">27</span>
+                <a href="#" class="streak"><img src="fire-icon.svg" alt="Streak" width="20" height="20"></a>
+                <a href="#" class="profile"><img src="profile-icon.svg" alt="Profile" width="20" height="20"></a>
             </div>
-            <div class="filter-group">
-                <h3>Offering Mentorship For</h3>
-                <label><input type="checkbox" name="students"> Students</label>
-                <label><input type="checkbox" name="freshers"> Freshers</label>
-                <label><input type="checkbox" name="working-professionals"> Working Professionals</label>
+        </header>
+        <main>
+            <div class="search-container" style="margin-bottom: 10px;">
+                <input type="text" placeholder="Search by name">
             </div>
-            <div class="filter-group">
-                <h3>Skills</h3>
-                <select name="skills">
-                    <option value="">Select skills</option>
-                    <option value="javascript">JavaScript</option>
-                    <option value="python">Python</option>
-                    <option value="react">React</option>
-                </select>
+            
+            <div class="filter-options">
+                <div class="filter-group">
+                    <h3>Filter by Domain</h3>
+                    <select name="domain">
+                        <option value="">All Domains</option>
+                        <option value="front-end development">Front-End Development</option>
+                        <option value="data science">Data Science</option>
+                        <option value="machine learning">Machine Learning</option>
+                        <option value="ux/ui design">UX/UI Design</option>
+                        <option value="cybersecurity">Cybersecurity</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h3>Skills</h3>
+                    <select name="skills">
+                        <option value="">All Skills</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="react">React</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h3>Tools</h3>
+                    <select name="tools">
+                        <option value="">All Tools</option>
+                        <option value="vscode">VS Code</option>
+                        <option value="git">Git</option>
+                        <option value="docker">Docker</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h3>Languages</h3>
+                    <label><input type="checkbox" name="english"> English</label>
+                    <label><input type="checkbox" name="spanish"> Spanish</label>
+                    <label><input type="checkbox" name="japanese"> Japanese</label>
+                    <label><input type="checkbox" name="russian"> Russian</label>
+                </div>
             </div>
-            <div class="filter-group">
-                <h3>Tools</h3>
-                <select name="tools">
-                    <option value="">Select tools</option>
-                    <option value="vscode">VS Code</option>
-                    <option value="git">Git</option>
-                    <option value="docker">Docker</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <h3>Languages</h3>
-                <label><input type="checkbox" name="english"> English</label>
-                <label><input type="checkbox" name="spanish"> Spanish</label>
-                <label><input type="checkbox" name="french"> French</label>
-            </div>
-        </div>
-        <div class="mentor-list">
-            <div class="mentor-card">
-                <img src="/placeholder.svg?height=100&width=100" alt="Marcus Robin">
-                <h2>Marcus Robin</h2>
-                <p>Web development</p>
-                <p>Languages: English, Spanish</p>
-                <p>Rating: 4.3 (500+ mentees)</p>
-                <p>Location: LA, USA</p>
-                <p>Rate: $110/month</p>
-                <button class="schedule">Schedule</button>
-                <button class="profile">Profile</button>
-            </div>
-            <div class="mentor-card">
-                <img src="/placeholder.svg?height=100&width=100" alt="Jennefer">
-                <h2>Jennefer</h2>
-                <p>Front-End development</p>
-                <p>Languages: Spanish</p>
-                <p>Rating: 4.7 (300+ mentees)</p>
-                <p>Location: NYC, USA</p>
-                <p>Rate: $97/month</p>
-                <button class="schedule">Schedule</button>
-                <button class="profile">Profile</button>
-            </div>
-            <div class="mentor-card">
-                <img src="/placeholder.svg?height=100&width=100" alt="Robert">
-                <h2>Robert</h2>
-                <p>UI/UX Designer</p>
-                <p>Languages: English, Spanish, French</p>
-                <p>Rating: 4.9 (600+ mentees)</p>
-                <p>Location: NYC, USA</p>
-                <p>Rate: $107/month</p>
-                <button class="schedule">Schedule</button>
-                <button class="profile">Profile</button>
-            </div>
-        </div>
-    </main>
+            
+            <div class="mentor-list" id="mentor-list"></div>
+        </main>
+    
     <script>
-        // Add any necessary JavaScript here
+        // Array of mentor objects
+      let mentors =  [
+  {
+    "name": "Jennefer",
+    "expertise": "Front-End Development",
+    "languages": "Spanish",
+    "rating": "4.7 (300+ mentees)",
+    "location": "NYC, USA",
+    "rate": "$97/month",
+    "profile_image": "https://i.imgur.com/3GmBztL.jpg",
+    "skills": ["JavaScript", "React", "HTML", "CSS"],
+    "tools": ["VS Code", "Git"]
+  },
+  {
+    "name": "Carlos Mendoza",
+    "expertise": "Data Science",
+    "languages": "Spanish, English",
+    "rating": "4.8 (500+ mentees)",
+    "location": "San Francisco, USA",
+    "rate": "$120/month",
+    "profile_image": "https://i.imgur.com/6dLkHXe.jpg",
+    "skills": ["Python", "Machine Learning", "Pandas", "NumPy"],
+    "tools": ["Jupyter Notebook", "Git", "Docker"]
+  },
+  {
+    "name": "Akira Tanaka",
+    "expertise": "Machine Learning",
+    "languages": "Japanese, English",
+    "rating": "4.9 (400+ mentees)",
+    "location": "Tokyo, Japan",
+    "rate": "$110/month",
+    "profile_image": "https://i.imgur.com/jNlVkfL.jpg",
+    "skills": ["Python", "Deep Learning", "TensorFlow", "Keras"],
+    "tools": ["PyCharm", "Docker", "Git"]
+  },
+  {
+    "name": "Elena Petrova",
+    "expertise": "UX/UI Design",
+    "languages": "Russian, English",
+    "rating": "4.6 (250+ mentees)",
+    "location": "Moscow, Russia",
+    "rate": "$85/month",
+    "profile_image": "https://i.imgur.com/xlF4uUf.jpg",
+    "skills": ["Figma", "Adobe XD", "User Research"],
+    "tools": ["Figma", "Sketch", "InVision"]
+  },
+  {
+    "name": "Liam O'Sullivan",
+    "expertise": "Cybersecurity",
+    "languages": "English",
+    "rating": "4.8 (350+ mentees)",
+    "location": "Dublin, Ireland",
+    "rate": "$105/month",
+    "profile_image": "https://i.imgur.com/C5Bt9yQ.jpg",
+    "skills": ["Network Security", "Ethical Hacking", "Penetration Testing"],
+    "tools": ["Kali Linux", "Wireshark", "Metasploit"]
+  },
+  {
+    "name": "Fatima Al-Masri",
+    "expertise": "Cloud Computing",
+    "languages": "Arabic, English",
+    "rating": "4.7 (270+ mentees)",
+    "location": "Dubai, UAE",
+    "rate": "$115/month",
+    "profile_image": "https://i.imgur.com/zO1SCzR.jpg",
+    "skills": ["AWS", "Azure", "Docker", "Kubernetes"],
+    "tools": ["AWS Console", "Azure Portal", "Terraform"]
+  },
+  {
+    "name": "Yara Hassan",
+    "expertise": "Back-End Development",
+    "languages": "Arabic, French",
+    "rating": "4.5 (200+ mentees)",
+    "location": "Cairo, Egypt",
+    "rate": "$90/month",
+    "profile_image": "https://i.imgur.com/r6FfhGg.jpg",
+    "skills": ["Node.js", "Express", "MongoDB", "SQL"],
+    "tools": ["Postman", "Docker", "VS Code"]
+  },
+  {
+    "name": "Ricardo Santos",
+    "expertise": "DevOps",
+    "languages": "Portuguese, English",
+    "rating": "4.9 (600+ mentees)",
+    "location": "Lisbon, Portugal",
+    "rate": "$130/month",
+    "profile_image": "https://i.imgur.com/NnUY2Ri.jpg",
+    "skills": ["CI/CD", "Docker", "Kubernetes", "Jenkins"],
+    "tools": ["GitLab CI", "Docker", "Kubernetes"]
+  },
+  {
+    "name": "Sofia Martinez",
+    "expertise": "Mobile App Development",
+    "languages": "Spanish, English",
+    "rating": "4.6 (320+ mentees)",
+    "location": "Buenos Aires, Argentina",
+    "rate": "$95/month",
+    "profile_image": "https://i.imgur.com/s1KZzAQ.jpg",
+    "skills": ["Flutter", "React Native", "Java", "Kotlin"],
+    "tools": ["Android Studio", "Xcode", "Git"]
+  },
+  {
+    "name": "Wei Zhang",
+    "expertise": "Artificial Intelligence",
+    "languages": "Chinese, English",
+    "rating": "4.8 (450+ mentees)",
+    "location": "Beijing, China",
+    "rate": "$125/month",
+    "profile_image": "https://i.imgur.com/pbH8Xu5.jpg",
+    "skills": ["Neural Networks", "Machine Learning", "Python", "Computer Vision"],
+    "tools": ["TensorFlow", "Keras", "PyTorch"]
+  }
+]
+
+
+// Function to render mentor data
+function renderMentors(mentorListData) {
+    const mentorList = document.getElementById('mentor-list');
+    mentorList.innerHTML = '';
+
+    // Retrieve the list of scheduled mentors from localStorage
+    const scheduledMentors = JSON.parse(localStorage.getItem('scheduledMentors')) || [];
+
+    mentorListData.forEach(mentor => {
+        const mentorCard = document.createElement('div');
+        mentorCard.className = 'mentor-card';
+
+        // Check if the mentor is already scheduled
+        const isBooked = scheduledMentors.some(
+            (scheduled) => scheduled.name === mentor.name && scheduled.domain === mentor.expertise
+        );
+
+        mentorCard.innerHTML = `
+            <img src="${mentor.profile_image}" alt="${mentor.name}">
+            <h2>${mentor.name}</h2>
+            <p>${mentor.expertise}</p>
+            <p>Languages: ${mentor.languages}</p>
+            <p>Rating: ${mentor.rating}</p>
+            <p>Location: ${mentor.location}</p>
+            <p>Rate: ${mentor.rate}</p>
+            ${isBooked 
+                ? `<button class="booked" disabled>Booked</button>` 
+                : `<button class="schedule">Schedule</button>`}
+            <button class="profile">Profile</button>
+        `;
+
+        // If not booked, add the event listener to the "Schedule" button
+        if (!isBooked) {
+            const scheduleButton = mentorCard.querySelector('.schedule');
+            scheduleButton.addEventListener('click', () => scheduleMentor(mentor));
+        }
+
+        mentorList.appendChild(mentorCard);
+    });
+}
+
+// Function to schedule a mentor and store in localStorage
+function scheduleMentor(mentor) {
+    const scheduledTime = new Date().toISOString(); // Store the current time as the scheduled time
+
+    // Create the mentor schedule object
+    const mentorSchedule = {
+        name: mentor.name,
+        domain: mentor.expertise,
+        time: scheduledTime
+    };
+
+    // Retrieve existing schedules from localStorage or initialize an empty array
+    let scheduledMentors = JSON.parse(localStorage.getItem('scheduledMentors')) || [];
+
+    // Add the new mentor schedule to the array
+    scheduledMentors.push(mentorSchedule);
+
+    // Store the updated array back into localStorage
+    localStorage.setItem('scheduledMentors', JSON.stringify(scheduledMentors));
+
+    alert(`${mentor.name} has been scheduled for ${mentor.expertise} at ${scheduledTime}`);
+
+    // Re-render the mentors to update the button state
+    renderMentors(mentors);
+}
+
+// Function to filter mentors based on selected criteria and search by name
+function filterMentors() {
+    const domain = document.querySelector('select[name="domain"]').value.toLowerCase();
+    const skills = document.querySelector('select[name="skills"]').value.toLowerCase();
+    const tools = document.querySelector('select[name="tools"]').value.toLowerCase();
+    const searchQuery = document.querySelector('.search-container input').value.toLowerCase();
+    const languageCheckboxes = document.querySelectorAll('.filter-group input[type="checkbox"]');
+    const selectedLanguages = Array.from(languageCheckboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.name.toLowerCase());
+
+    const filteredMentors = mentors.filter(mentor => {
+        const matchesDomain = !domain || mentor.expertise.toLowerCase().includes(domain);
+        const matchesSkills = !skills || mentor.skills.some(skill => skill.toLowerCase().includes(skills));
+        const matchesTools = !tools || mentor.tools.some(tool => tool.toLowerCase().includes(tools));
+        const matchesLanguage = !selectedLanguages.length || selectedLanguages.some(lang => mentor.languages.toLowerCase().includes(lang));
+        const matchesSearch = !searchQuery || mentor.name.toLowerCase().includes(searchQuery);
+        
+        return matchesDomain && matchesSkills && matchesTools && matchesLanguage && matchesSearch;
+    });
+
+    renderMentors(filteredMentors);
+}
+
+// Add event listeners for filtering
+document.querySelector('select[name="domain"]').addEventListener('change', filterMentors);
+document.querySelector('select[name="skills"]').addEventListener('change', filterMentors);
+document.querySelector('select[name="tools"]').addEventListener('change', filterMentors);
+document.querySelectorAll('.filter-group input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', filterMentors);
+});
+document.querySelector('.search-container input').addEventListener('input', filterMentors);
+
+// Initial render of all mentors
+document.addEventListener('DOMContentLoaded', () => {
+    renderMentors(mentors);
+});
+
+
+
     </script>
 </body>
 

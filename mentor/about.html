@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 steps ahead</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      .left{
+    width: 250px;
+}
+.profile_con{
+    display: flex;
+   
+    height: 100vh;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin:0rem 5rem;
+}
+
+.profile-card {
+    background-color: #444;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 100px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 14px;
+    margin: 0;
+}
+
+.location-icon {
+    font-size: 20px;
+}
+
+.resume{
+    margin: 0.5rem 0 ;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.skills-card {
+    background-color: #444;
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+}
+
+.skill {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #777;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.social-card {
+    margin: 0.5rem 0;
+    background-color: #444;
+    border-radius: 15px;
+    padding: 15px 20px;
+    color: #fff;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.right{
+    width: max-content;
+    margin:0 2rem;
+}
+
+h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+.social-icon:hover {
+    transform: scale(1.5);
+}
+
+.about-card {
+    padding:2rem 3rem;
+    background-color: #444;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.h3 {
+    margin: 0 0 10px;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: medium;
+}
+
+.courses-card {
+    margin: 0.5rem 0;
+    background-color: #444;
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.course-item {
+    display: flex;
+    align-items: center;
+    background-color: #555;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    margin: 1rem ;
+    width: 90%;
+}
+
+.course-item:hover {
+    background-color: #666;
+}
+
+.course-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+   
+    margin-right: 10px;
+}
+
+.course-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-info h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.course-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #ddd;
+}
+
+.streak-card {
+    background-color: #444;
+    border-radius: 15px;
+    padding: 2rem 2rem;
+    color: #fff;
+    width: 335px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: 0.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.streak-card h3 {
+   
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.streak {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    display: flex;
+    justify-content: left;
+   
+}
+
+.fire-icon {
+    margin-top: 1rem;
+    width: 150px;
+    height: 150px;
+}
+
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    width: 50px;
+}
+
+.bar {
+ 
+    background-color: #ccc;
+    width: 50px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.bar:hover {
+    background-color: #999;
+}
+
+.bottom{
+    display: flex; flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    .profile_con {
+        display: flex;
+        justify-items: center;
+        margin: 1rem;
+        flex-direction: column;
+    }
+
+    .bottom{
+        display: flex;
+        flex-direction: column;
+    }
+    .left, .right {
+        flex: unset;
+        width: 100%;
+    }
+    .right{
+        margin-left: 0rem;
+    }
+
+    .profile-card, .resume, .skills-card, .social-card, .about-card, .courses-card, .streak-card {
+        width: 100%;
+    }
+
+    .nav-icons {
+        display: none;
+    }
+
+    .navbar__extras {
+        display: none;
+    }
+
+    #mobile-menu.is-active + .navbar__menu, .navbar__menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background-color: #333;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .streak-card{
+        width: 100%;
+    }
+}
+
+.schedule__container {
+  margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #444;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
+.schedule__header {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.schedule__header button {
+    background: #7eadfd;
+    height: 40px;
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.schedule__header button:hover {
+    background: #5c8fe6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main__content .schedule__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    padding: 16px 0;
+    overflow-x: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.schedule__time {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+    min-width: calc(100% - 68px);
+    width: fit-content;
+    margin-left: 64px;
+    align-items: center;
+    padding: 8px 16px;
+    background: #333;
+    border-radius: 8px;
+    color: white;
+}
+
+.schedule__time span {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.schedule__daily {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+.schedule__daily .schedule__day {
+    display: grid;
+    gap: 8px;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.schedule__daily .day {
+  color: white;
+    text-align: start;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.schedule__event {
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    align-items: center;
+    padding: 8px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event__avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.event__details {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding-right: 24px;
+}
+
+.session__name {
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.session__description {
+    /* wrap the text in a single line, and hide the overflow */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+.add__session {
+    width: 100%;
+    height: 56px;
+    padding: 8px 16px;
+    float: right;
+    background: #111111e8;
+    border: 1px solid #6698F1;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+    </style>
+</head>
+<body style="display: flex; flex-direction: column; ">
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar__container">
+                    <a href="index.html" id="navbar__logo">
+                        <img src="/assets/images/web logo.png" alt="2 Steps Ahead Logo">
+                    </a>
+                    <div class="navbar__toggle" id="mobile-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="navbar__menu">
+                        <li class="navbar__item">
+                            
+                            <a href="/student/dashboard.html" class="navbar__links" id="home-page">
+                                <img src="\assets\images\dashboard -logo.png" alt="">
+                                Dashboard</a>
+                        </li>
+                        <li class="navbar__item">
+                            
+                            <a href="/student/mentorlist.html" class="navbar__links" id="wallet-page">
+                                <img src="/assets//images/mentors-list.png" alt="">Mentor List</a>
+                        </li>
+                        <li class="navbar__item">
+                            
+                            <a href="blogs.html" class="navbar__links" id="blogs-page">
+                                <img src="assets/images/internship-logo.png" alt="">Internships</a>
+                        </li>
+                    </ul>
+                    <a href="/startingpages/studentMentor/studentMentor.html">
+                    <button style="padding: 10px;border-radius: 8px;width: 6vw;height: 5vh;background-color: red;color: white;border-width: 0px;cursor: pointer;">
+                        Logout
+                    </button>
+                </a>
+                    <div class="navbar__extras">
+                        <div class="nav-icons">
+                            <div class="notification">
+                                <img src="../assets/images/notification.png" alt="Notifications">
+                                <span class="badge">1</span>
+                            </div>
+                            <div class="points">
+                                <span>27</span>
+                                <img src="../assets/images/streak (1).png" alt="Points">
+                            </div>
+                            <div class="profile">
+                                <img src="../assets/images/solo-session.png" alt="Profile Picture">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="profile_con">
+        <div class="left">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <img src="../assets/images/profilepic.jpg" alt="Anjella" class="profile-img">
+                    <div style="display: flex; flex-direction: row;">
+                    <h2>Anjella</h2>
+                    <p><span class="location-icon">📍</span> USA</p>
+                </div>
+                
+                </div>
+            </div>
+            <div class="resume">
+                <a href="../assets/Dheeraj Nandiraju ats 65.pdf" download="dheeraj_nandiraju.pdf">
+                    <h2>download Resume</h2>
+                </a>
+                
+            </div>
+            <div class="skills-card">
+                <h3>Skills</h3>
+                <div class="skills-list">
+                    <span class="skill">Front-end</span>
+                    <span class="skill">UI/UX</span>
+                    <span class="skill">Git/Github</span>
+                    <span class="skill">Visual Studio Code</span>
+                    <span class="skill">Docker</span>
+                    <span class="skill">Google Analytics</span>
+                    <span class="skill">SQL</span>
+                </div>
+            </div>
+            <div class="social-card">
+                <h3>let's socialize</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/dheerajnandiraju/" target="_blank">
+                        <img src="../assets/images/instagram.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://github.com/dheerajnandiraju" target="_blank">
+                        <img src="../assets/images/github.png" alt="GitHub" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/dheeraj-nandiraju/" target="_blank">
+                        <img src="../assets/images/linkedin.png" alt="LinkedIn" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="about-card">
+                <h3 class="h3">About Me</h3>
+                <p>
+                    Hi there! My name is Anjula, and I'm a passionate student currently pursuing my B.Tech at Princeton. 
+                    I'm particularly interested in Web development and enjoy exploring new ideas within this field. 
+                    I'm a dedicated individual with a strong work ethic and a love for learning. 
+                    I'm always eager to collaborate with others and contribute to my community.
+                </p>
+            </div>
+          <div>
+            <div class="schedule__container">
+              <div class="schedule__header">
+                  <h1>My Schedule</h1>
+                  <button>Full Schedule</button>
+              </div>
+              <div class="schedule__content">
+                  <div class="schedule__time">
+                      <span>10:00</span>
+                      <span>10:30</span>
+                      <span>11:00</span>
+                      <span>11:30</span>
+                      <span>12:00</span>
+                      <span>12:30</span>
+                      <span>13:00</span>
+                      <span>13:30</span>
+                  </div>
+                  <div class="schedule__daily">
+                      <div class="schedule__day">
+                          <span class="day">Mon</span>
+                          <div class="schedule__event" style="grid-column: 2 / span 3;">
+                              <img src="/assets/images/person1.svg" alt="User" class="event__avatar">
+                              <div class="event__details">
+                                  <span class="session__name">Session 2</span>
+                                  <span class="session__description">Introduction to Web development</span>
+                              </div>
+                          </div>
+                          <div class="schedule__event" style="grid-column: 7 / span 2;">
+                              <img src="/assets/images/person2.svg" alt="User" class="event__avatar">
+                              <div class="event__details">
+                                  <span class="session__name">Session 12</span>
+                                  <span class="session__description">Linked list</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="schedule__day">
+                          <span class="day">Tue</span>
+                          <div class="schedule__event" style="grid-column: 3 / span 4;">
+                              <img src="/assets/images/person2.svg" alt="User" class="event__avatar">
+                              <div class="event__details">
+                                  <span class="session__name">Session 5</span>
+                                  <span class="session__description">Introduction to HTML</span>
+                              </div>
+                          </div>
+                      </div>
+                
+                  </div>
+              </div>
+              <button class="add__session">Add session</button>
+          </div>
+          </div>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.querySelector('.navbar__menu');
+
+        mobileMenu.addEventListener('click', function() {
+            mobileMenu.classList.toggle('is-active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+.main__layout {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+    height: calc(100vh - 80px);
+}
+
+.main__layout > * {
+    flex: 1;
+}
+
+.main__content {
+    display: flex;
+    gap: 16px;
+    height: 100%;
+}
+
+.main__content .schedule__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #444;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 65%;
+    height: 100%;
+    color: white;
+    border: solid #5c8fe6 5px;
+}
+
+.schedule__header {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.schedule__header button {
+    background: #7eadfd;
+    height: 40px;
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.schedule__header button:hover {
+    background: #5c8fe6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main__content .schedule__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    padding: 16px 0;
+    overflow-x: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.schedule__time {
+    border: solid #7eadfd 5px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+    min-width: calc(100% - 68px);
+    width: fit-content;
+    margin-left: 64px;
+    align-items: center;
+    padding: 8px 16px;
+    background: #333;
+    border-radius: 8px;
+}
+
+.schedule__time span {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.schedule__daily {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+.schedule__daily .schedule__day {
+    display: grid;
+    gap: 8px;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.schedule__daily .day {
+    text-align: start;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.schedule__event {
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    align-items: center;
+    padding: 8px;
+    background: #ffffff;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event__avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.event__details {
+   
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding-right: 24px;
+}
+
+.session__name {
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.session__description {
+    /* wrap the text in a single line, and hide the overflow */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.domains__container {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 35%;
+}
+
+.domains__header {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.domains__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    height: calc(100% - 48px);
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.domain {
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.web-dev, .art { background-color: #333; color: #ffffff; border: solid #ffc107 5px;}
+.dsa, .cloud { background-color: #333; color: #ffffff; border: solid #ffc107 5px;}
+
+.secondary__content {
+    display: flex;
+    gap: 16px;
+}
+
+.students__container {
+    color: white;
+    border: solid #ffc107 3px;
+    background: #333;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.leaderboard__container {
+   background-color: #444;
+   border: solid #5c8fe6 5px;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.student__item {
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px;
+ 
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.session-info-btn, #moreStudentsBtn {
+    background: #a1c3ff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.session-info-btn:hover, #moreStudentsBtn:hover {
+    background: #5c8fe6;
+}
+
+.add__session {
+    width: 100%;
+    height: 56px;
+    padding: 8px 16px;
+    float: right;
+    background: #111111e8;
+    border: 1px solid #6698F1;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard__podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100px;
+    margin: 16px 0;
+}
+
+.podium__place {
+    width: 60px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.podium__place img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.first { height: 100%; background-color: #333; border: 3px solid #6698F1}
+.second { height: 80%; background-color: #333; border: 3px solid #6698F1}
+.third { height: 60%; background-color: #333; border: 3px solid #6698F1}
+
+.leaderboard__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard__table th, .leaderboard__table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.leaderboard__table th {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+    .main__content .schedule__container {
+        width: 100%;
+    }
+
+    .domains__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__layout {
+        padding: 8px;
+    }
+
+    .main__content {
+        flex-direction: column;
+    }
+
+    .main__content .schedule__container {
+        width: 100%;
+    }
+
+    .domains__container {
+        width: 100%;
+    }
+
+    .secondary__content {
+        flex-direction: column;
+    }
+
+    .students__container, .leaderboard__container {
+        width: 100%;
+    }
+}
